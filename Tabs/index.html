@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <tabs>
+        <tab name="tab1" selected="true">
+          <button type="button" class="btn">Tab 01 button</button>
+        </tab>
+        <tab name="tab2">
+          <button type="button" class="btn">Tab 02 button</button>
+        </tab>
+        <tab name="tab3">
+          <button type="button" class="btn">Tab 03 button</button>
+        </tab>
+      </tabs>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script src="compunent.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#root",
+        data: {},
+      });
+    </script>
+  </body>
+</html>
