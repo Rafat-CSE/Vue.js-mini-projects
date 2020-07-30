@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: khaki;
+}
+header {
+  background-color: coral;
+  width: 500px;
+  padding: 10px;
+  color: darkslategray;
+  border: 3px solid darkslategray;
+  margin: 20px auto;
+  text-align: center;
+}
+#root {
+  background-color: coral;
+  width: 500px;
+  padding: 10px;
+  color: darkslategray;
+  border: 3px solid darkslategray;
+  overflow: hidden;
+  margin: auto;
+  height: 500px;
+}
+#root div {
+  width: 45%;
+  float: left;
+}
+#root div:first-child {
+  height: 100%;
+  margin-right: 20px;
+  border-right: 3px solid darkslategray;
+}
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 20px;
+  font-weight: bold;
+}
+ul li a {
+  text-decoration: none;
+}
+#root > div:last-child {
+  margin-top: 100px;
+}
+input {
+  outline: none;
+  border: none;
+  background-color: darkslategray;
+  color: coral;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#addButton {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-weight: bold;
+  background: none;
+  border: 3px solid darkslategray;
+  outline: none;
+  color: darkslategray;
+}
+#addButton:hover {
+  color: coral;
+  background-color: darkslategray;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.rmv {
+  padding: 0px 5px;
+  font-weight: bold;
+  background: none;
+  border: 2px solid darkslategray;
+  outline: none;
+  color: darkslategray;
+}
+.rmv:hover {
+  background-color: darkslategray;
+  color: coral;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+.todoanimation-enter-active,
+.todoanimation-leave-active {
+  transition: margin-left 0.5s;
+}
+.todoanimation-enter,
+.todoanimation-leave-to {
+  margin-left: -200px;
+}

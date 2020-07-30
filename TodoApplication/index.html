@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TODO APPLICATION</h1>
+    </header>
+    <div id="root">
+      <div>
+        <ul>
+          <transition-group name="todoanimation">
+            <li v-for="(item,i) in items" :key="i">
+              <span>{{i+1}}.</span>{{ item }}
+              <button type="button" class="rmv" @click="remove(i)">X</button>
+            </li>
+          </transition-group>
+        </ul>
+      </div>
+      <div>
+        <input type="text" v-model="newItem" />
+        <br />
+        <button type="button" id="addButton" @click="addItem()">
+          ADD ITEM
+        </button>
+      </div>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#root",
+        data: {
+          newItem: "",
+          items: [],
+        },
+        methods: {
+          addItem: function () {
+            this.items.push(this.newItem);
+            this.newItem = " ";
+          },
+          remove: function (i) {
+            this.items.splice(i, 1);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
