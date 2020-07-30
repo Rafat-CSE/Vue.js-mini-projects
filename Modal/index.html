@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <button type="button" class="btn" @click="show=true">Show Modal</button>
+      <transition name="fade">
+        <modal v-if="show" @oncancel="show = false">
+          <tamplate slot="mHeader">
+            This is header
+          </tamplate>
+          <tamplate slot="mBody">
+            <h3>Enter Your Name</h3>
+            <input type="text" />
+          </tamplate>
+        </modal>
+      </transition>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+      Vue.component("modal", {
+        template: `
+          <div class="modal">
+            <div class="modal-header">
+              <slot name="mHeader"></slot>
+              <button type="button" @click="$emit('oncancel')">X</button>
+            </div>
+            <div class="modal-body">
+              <slot name="mBody"></slot>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn" @click="$emit('oncancel')">Cancel</button>
+            </div>
+          </div>
+        `,
+      });
+
+      var app = new Vue({
+        el: "#root",
+        data: {
+          show: false,
+        },
+      });
+    </script>
+  </body>
+</html>
