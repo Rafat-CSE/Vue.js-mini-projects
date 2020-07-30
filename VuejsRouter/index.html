@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Router</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <nav>
+        <ul>
+          <li><router-link to="/home">Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
+        </ul>
+      </nav>
+      <transition name="animate">
+        <router-view></router-view>
+      </transition>
+    </div>
+    <script src="vue.js"></script>
+    <script src="vue-router.js"></script>
+    <script src="myvuejs.js"></script>
+  </body>
+</html>
