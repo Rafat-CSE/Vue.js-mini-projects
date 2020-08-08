@@ -1,0 +1,145 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-family: arial;
+	background-color: #eadede;
+}
+.mr-2{
+	margin-right: 2px;
+}
+.container{
+	width: 970px;
+	margin: auto;
+}
+.btn-gray{
+	padding: 8px 24px;
+	background-color: #757272;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	outline: none;
+}
+.btn-gray:hover{
+	cursor: pointer;
+	background-color: #908e8e;
+	color: #efeaea;
+}
+.btn-pink{
+	padding: 10px 24px;
+	background-color: #e91e63;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	outline: none;
+}
+.btn-pink:hover{
+	cursor: pointer;
+	background-color: #d82965;
+	color: #fff;
+}
+/* style for main content */
+.header{
+	margin-top: 30px;
+	overflow: hidden;
+}
+.hl{
+	float: left;
+	color: #757272;
+}
+.hr{
+	float: right; 
+}
+hr{
+	border: 2px solid #757272;
+}
+
+.body{
+	margin-top: 20px; 
+}
+.container table{
+	width: 100%;
+}
+.container th{
+	padding: 10px;
+	background-color: #757272;
+	color: #fff;
+	font-size: 24px;
+}
+
+.container td{
+	padding: 8px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: #757272;
+}
+.container tr:hover{
+	background-color: #d8d3d3;
+	cursor: pointer;
+}
+
+/* Style For Model */
+#model{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(0, 0, 0, 0.4);
+}
+.mainModel{
+	margin: auto;
+	margin-top: 50px;
+	width: 700px;
+	height: 500px;
+	background: #eae1e1;
+}
+.modelHead{
+	background: #e91e63;
+	padding: 10px 8px;
+	color: #eae1e1;
+	overflow: hidden;
+}
+.modelHead h3{
+	float: left;
+}
+.modelHead button{
+	float: right;
+	background: none;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	font-size: 20px;
+	margin-right: 10px;
+	padding: 0px 10px;
+	color: #eae1e1;
+}
+.modelHead button:hover{
+	background: #d82965;
+	cursor: pointer;
+}
+.modelBody{
+	padding: 10px;
+}
+.modelForm{
+	margin-top: 10px;
+}
+input{
+	padding: 5px 15px;
+	border: none;
+    outline: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #757272;
+    font-size: 20px;
+}
+#model table{
+	width: 90%;
+	margin: auto;
+	font-weight: bold;
+	color: #757272;
+}
+
